@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Visual Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JS scripts for animations -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Visual Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            data-toggle="dropdown">Visualizations</a>
+                        <div class="dropdown-menu">
+                            <a href="movie_title.html" class="dropdown-item">Title</a>
+                            <a href="genre.html" class="dropdown-item">Genre</a>
+                            <a href="country.html" class="dropdown-item">Country</a>
+                            <a href="language.html" class="dropdown-item">Language</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="comparisons.html" class="dropdown-item text-light">Comparisons</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparisons.html">Comparisons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="data.html">Data</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 mb-5">
+        <!-- <img src="https://i.pinimg.com/originals/f1/1c/78/f11c78eb7a85cf6e3afae88f266b7775.jpg" alt=""> -->
+        <div class="container h-100 mt-5">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-12">
+                    <h1 class="display-3 text-dark mt-5 text-center">Country</h1>
+                    <p class="lead text-dark ml-2 text-center">The frequency of production country locations displayed visually as a WordCloud.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- /.row -->
+            <div class="col-md-8 mb-5 mx-auto">
+                <div class="card h-100 border-0 custom-card">
+                    <img class="card-img-top border-0" src="assets/country_wc.jpg" alt="Python">
+                    <div class="card-body">
+                        <h4 class="card-title pt-2">Country</h4>
+                        <p class="card-text">In the dataset, the “Country” field represents the countries where the production companies who financed the film were
+                        located. This means, for example, even if a title is shot on location in France, if its production companies are all
+                        based in the USA, the country is recorded as USA.</p>
+                        <p>This visual will allow you to quickly gain insight on the frequency of production country locations from the dataset.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="comparisons.html" class="btn btn-dark">Back to Comparisons</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Kit Rana 2019</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+</body>
+
+</html>

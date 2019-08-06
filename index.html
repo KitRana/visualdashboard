@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Visual Dashboard</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JS scripts for animations -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Visual Dashboard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Visualizations</a>
+            <div class="dropdown-menu">
+              <a href="movie_title.html" class="dropdown-item">Title</a>
+              <a href="genre.html" class="dropdown-item">Genre</a>
+              <a href="country.html" class="dropdown-item">Country</a>
+              <a href="language.html" class="dropdown-item">Language</a>
+              <div class="dropdown-divider"></div>
+              <a href="comparisons.html" class="dropdown-item text-light">Comparisons</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comparisons.html">Comparisons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="data.html">Data</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="jumbotron">
+    <img src="" alt="">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-1 text-dark">Words in the Clouds</h1>
+          <p class="lead text-dark ml-2">A Visual Representation of Numerical Data.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>What are Wordclouds in Data Science?</h2>
+        <hr>
+        <p>Data can be visualized without using numbers with a visualization called a word cloud. A word cloud allows you visualize
+        the frequency with which an item appears in a set of data or show the importance of an item in a set of data by using
+        the font size or color of the word to indicate its weight or significance. Word clouds are great
+        tools to use in posters, on a website, or in presentations where the audience you are presenting to does not have a long
+        time to study your visualization.</p>
+        <p>In this analysis, I used word clouds to show the frequency in which a given category was associated with the movies in the dataset which consisted of movies from the TMDB Top 5000 Movies Dataset as well as elements from the OMDB API. </p>
+        <p>In order to generate the Wordclouds for this analysis, I used the <code>WordCloud</code> and <code>Pilow</code> libraries in Python. <code>WordCloud</code> allows you to pass a list of strings as they appear in the dataset.  <code>WordCloud</code> will then display each string increasing the font size from small to large depending on the frequency. Using <code>Pillow</code>, I was able to import an image and mask the WordCloud over this image.</p>
+        <a class="btn btn-dark btn-lg" href="comparisons.html">Learn More &raquo;</a>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row mt-5">
+      <div class="col-md-3 mb-5">
+        <div class="card h-100 border-0">
+          <img class="card-img-top img-thumbnail border-0" src="assets/movie_title_wc.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <p class="card-text">A visual representation of the most common words used in movie titles within the TMDB Top 5000 Movie Dataset, masked over the Apple logo.<br><br>
+              Click below for more info.</p>
+          </div>
+          <div class="card-footer">
+            <a href="movie_title.html" class="btn btn-dark">More Info</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-5">
+        <div class="card h-100 border-0">
+          <img class="card-img-top img-thumbnail border-0" src="assets/genre_wc.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Genre</h4>
+            <p class="card-text">A visual representation of the most common movie genres within the TMDB Top 5000 Movie Dataset, masked over the GitHub logo.<br><br>
+            Click below for more info.</p>
+          </div>
+          <div class="card-footer">
+            <a href="genre.html" class="btn btn-dark">More Info</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-5">
+        <div class="card h-100 border-0">
+          <img class="card-img-top img-thumbnail border-0" src="assets/country_wc.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Country</h4>
+            <p class="card-text">A visual representation of the most common production countries within the TMDB Top 5000 Movie Dataset, masked over the Python logo.<br><br>
+            Click below for more info.</p>
+          </div>
+          <div class="card-footer">
+            <a href="country.html" class="btn btn-dark">More Info</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-5">
+        <div class="card h-100 border-0">
+          <img class="card-img-top img-thumbnail border-0 language" src="assets/language_wc.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Language</h4>
+            <p class="card-text">A visual representation of the most common languagues spoken within the TMDB Top 5000 Movie Dataset, masked over the Rutgers logo.<br><br>
+            Click below for more info.</p>
+          </div>
+          <div class="card-footer">
+            <a href="language.html" class="btn btn-dark">More Info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Kit Rana 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+</body>
+
+</html>
