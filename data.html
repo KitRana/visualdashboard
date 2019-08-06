@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Data</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <!-- JS scripts for animations -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Visual Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                        data-toggle="dropdown">Visualizations</a>
+                    <div class="dropdown-menu">
+                        <a href="movie_title.html" class="dropdown-item">Title</a>
+                        <a href="genre.html" class="dropdown-item">Genre</a>
+                        <a href="country.html" class="dropdown-item">Country</a>
+                        <a href="language.html" class="dropdown-item">Language</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="comparisons.html" class="dropdown-item text-light">Comparisons</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparisons.html">Comparisons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header class="py-5 mb-5">
+    <!-- <img src="https://i.pinimg.com/originals/f1/1c/78/f11c78eb7a85cf6e3afae88f266b7775.jpg" alt=""> -->
+    <div class="container h-100 mt-5">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-12 text-center">
+                <h1 class="display-2 text-dark mt-5">Data</h1>
+                <p class="lead text-dark ml-2">The complete version of the Pandas DataFrame below was used to generate the visualizations in this analysis.</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <table class="dataframe table-responsive table-borderless table-striped table-hover table-sm">
+            <thead class="bg-dark text-light">
+                <tr style="text-align: left;">
+                <th></th>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Rated</th>
+                <th>Runtime</th>
+                <th>Genre</th>
+                <th>Director</th>
+                <th>Writer</th>
+                <th>Language</th>
+                <th>Country</th>
+                <th>Awards</th>
+                <th>IMDB Rating</th>
+                <th>Revenue</th>
+                <th>Budget</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th>0</th>
+                <td>Avatar</td>
+                <td>2009</td>
+                <td>PG-13</td>
+                <td>162</td>
+                <td>Action, Adventure, Fantasy, Sci-Fi</td>
+                <td>James Cameron</td>
+                <td>James Cameron</td>
+                <td>English, Spanish</td>
+                <td>UK, USA</td>
+                <td>Won 3 Oscars. Another 85 wins &amp; 128 nominations.</td>
+                <td>7.8</td>
+                <td>2787965087</td>
+                <td>237000000</td>
+                </tr>
+                <tr>
+                <th>1</th>
+                <td>Pirates of the Caribbean: At World's End</td>
+                <td>2007</td>
+                <td>PG-13</td>
+                <td>169</td>
+                <td>Action, Adventure, Fantasy</td>
+                <td>Gore Verbinski</td>
+                <td>Ted Elliott, Terry Rossio, Ted Elliott (charac...</td>
+                <td>Mandarin, English</td>
+                <td>USA</td>
+                <td>Nominated for 2 Oscars. Another 20 wins &amp; 44 n...</td>
+                <td>7.1</td>
+                <td>961000000</td>
+                <td>300000000</td>
+                </tr>
+                <tr>
+                <th>2</th>
+                <td>Spectre</td>
+                <td>2015</td>
+                <td>PG-13</td>
+                <td>148</td>
+                <td>Action, Adventure, Thriller</td>
+                <td>Sam Mendes</td>
+                <td>John Logan (screenplay by), Neal Purvis (scree...</td>
+                <td>English, Spanish, Italian, German, French</td>
+                <td>UK, USA</td>
+                <td>Won 1 Oscar. Another 7 wins &amp; 32 nominations.</td>
+                <td>6.8</td>
+                <td>880674609</td>
+                <td>245000000</td>
+                </tr>
+                <tr>
+                <th>3</th>
+                <td>The Dark Knight Rises</td>
+                <td>2012</td>
+                <td>PG-13</td>
+                <td>164</td>
+                <td>Action, Thriller</td>
+                <td>Christopher Nolan</td>
+                <td>Jonathan Nolan (screenplay), Christopher Nolan...</td>
+                <td>English, Arabic</td>
+                <td>UK, USA</td>
+                <td>Nominated for 1 BAFTA Film Award. Another 38 w...</td>
+                <td>8.4</td>
+                <td>1084939099</td>
+                <td>250000000</td>
+                </tr>
+                <tr>
+                <th>4</th>
+                <td>John Carter</td>
+                <td>2012</td>
+                <td>PG-13</td>
+                <td>132</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Andrew Stanton</td>
+                <td>Andrew Stanton (screenplay by), Mark Andrews (...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>2 wins &amp; 8 nominations.</td>
+                <td>6.6</td>
+                <td>284139100</td>
+                <td>260000000</td>
+                </tr>
+                <tr>
+                <th>5</th>
+                <td>Spider-Man 3</td>
+                <td>2007</td>
+                <td>PG-13</td>
+                <td>139</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Sam Raimi</td>
+                <td>Sam Raimi (screenplay), Ivan Raimi (screenplay...</td>
+                <td>English, French</td>
+                <td>USA</td>
+                <td>Nominated for 1 BAFTA Film Award. Another 3 wi...</td>
+                <td>6.2</td>
+                <td>890871626</td>
+                <td>258000000</td>
+                </tr>
+                <tr>
+                <th>6</th>
+                <td>Tangled</td>
+                <td>2010</td>
+                <td>PG</td>
+                <td>100</td>
+                <td>Animation, Adventure, Comedy, Family, Fantasy,...</td>
+                <td>Nathan Greno, Byron Howard</td>
+                <td>Dan Fogelman (screenplay by), Jacob Grimm (bas...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Nominated for 1 Oscar. Another 9 wins &amp; 40 nom...</td>
+                <td>7.8</td>
+                <td>591794936</td>
+                <td>260000000</td>
+                </tr>
+                <tr>
+                <th>7</th>
+                <td>Avengers: Age of Ultron</td>
+                <td>2015</td>
+                <td>PG-13</td>
+                <td>141</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Joss Whedon</td>
+                <td>Joss Whedon, Stan Lee (based on the Marvel com...</td>
+                <td>English, Korean</td>
+                <td>USA</td>
+                <td>7 wins &amp; 45 nominations.</td>
+                <td>7.3</td>
+                <td>1405403694</td>
+                <td>280000000</td>
+                </tr>
+                <tr>
+                <th>8</th>
+                <td>Harry Potter and the Half-Blood Prince</td>
+                <td>2009</td>
+                <td>PG</td>
+                <td>153</td>
+                <td>Adventure, Family, Fantasy, Mystery</td>
+                <td>David Yates</td>
+                <td>Steve Kloves (screenplay), J.K. Rowling (novel)</td>
+                <td>English</td>
+                <td>UK, USA</td>
+                <td>Nominated for 1 Oscar. Another 8 wins &amp; 35 nom...</td>
+                <td>7.6</td>
+                <td>933959197</td>
+                <td>250000000</td>
+                </tr>
+                <tr>
+                <th>9</th>
+                <td>Batman v Superman: Dawn of Justice</td>
+                <td>2016</td>
+                <td>PG-13</td>
+                <td>151</td>
+                <td>Action, Adventure, Fantasy, Sci-Fi</td>
+                <td>Zack Snyder</td>
+                <td>Chris Terrio, David S. Goyer, Bob Kane (Batman...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>14 wins &amp; 30 nominations.</td>
+                <td>6.5</td>
+                <td>873260194</td>
+                <td>250000000</td>
+                </tr>
+                <tr>
+                <th>10</th>
+                <td>Superman Returns</td>
+                <td>2006</td>
+                <td>PG-13</td>
+                <td>154</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Bryan Singer</td>
+                <td>Michael Dougherty (screenplay), Dan Harris (sc...</td>
+                <td>English, German, French</td>
+                <td>USA</td>
+                <td>Nominated for 1 Oscar. Another 12 wins &amp; 40 no...</td>
+                <td>6.1</td>
+                <td>391081192</td>
+                <td>270000000</td>
+                </tr>
+                <tr>
+                <th>11</th>
+                <td>Quantum of Solace</td>
+                <td>2008</td>
+                <td>PG-13</td>
+                <td>106</td>
+                <td>Action, Adventure, Thriller</td>
+                <td>Marc Forster</td>
+                <td>Paul Haggis, Neal Purvis, Robert Wade</td>
+                <td>English, Spanish, Italian, French, Swiss Germa...</td>
+                <td>UK, USA</td>
+                <td>Nominated for 2 BAFTA Film Awards. Another 4 w...</td>
+                <td>6.6</td>
+                <td>586090727</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>12</th>
+                <td>Pirates of the Caribbean: Dead Man's Chest</td>
+                <td>2006</td>
+                <td>PG-13</td>
+                <td>151</td>
+                <td>Action, Adventure, Fantasy</td>
+                <td>Gore Verbinski</td>
+                <td>Ted Elliott, Terry Rossio, Ted Elliott (charac...</td>
+                <td>English, Turkish, Greek, Mandarin, French</td>
+                <td>USA</td>
+                <td>Won 1 Oscar. Another 42 wins &amp; 53 nominations.</td>
+                <td>7.3</td>
+                <td>1065659812</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>13</th>
+                <td>The Lone Ranger</td>
+                <td>2013</td>
+                <td>PG-13</td>
+                <td>150</td>
+                <td>Action, Adventure, Western</td>
+                <td>Gore Verbinski</td>
+                <td>Justin Haythe (screenplay), Ted Elliott (scree...</td>
+                <td>English, North American Indian</td>
+                <td>USA</td>
+                <td>Nominated for 2 Oscars. Another 4 wins &amp; 17 no...</td>
+                <td>6.4</td>
+                <td>89289910</td>
+                <td>255000000</td>
+                </tr>
+                <tr>
+                <th>14</th>
+                <td>Man of Steel</td>
+                <td>2013</td>
+                <td>PG-13</td>
+                <td>143</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Zack Snyder</td>
+                <td>David S. Goyer (screenplay), David S. Goyer (s...</td>
+                <td>English</td>
+                <td>USA, UK</td>
+                <td>7 wins &amp; 46 nominations.</td>
+                <td>7.1</td>
+                <td>662845518</td>
+                <td>225000000</td>
+                </tr>
+                <tr>
+                <th>15</th>
+                <td>The Chronicles of Narnia: Prince Caspian</td>
+                <td>2008</td>
+                <td>PG</td>
+                <td>150</td>
+                <td>Action, Adventure, Family, Fantasy</td>
+                <td>Andrew Adamson</td>
+                <td>Andrew Adamson (screenplay), Christopher Marku...</td>
+                <td>English</td>
+                <td>USA, Poland, Slovenia, Czech Republic, UK</td>
+                <td>2 wins &amp; 20 nominations.</td>
+                <td>6.5</td>
+                <td>419651413</td>
+                <td>225000000</td>
+                </tr>
+                <tr>
+                <th>16</th>
+                <td>The Avengers</td>
+                <td>2012</td>
+                <td>PG-13</td>
+                <td>143</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Joss Whedon</td>
+                <td>Joss Whedon (screenplay), Zak Penn (story), Jo...</td>
+                <td>English, Russian, Hindi</td>
+                <td>USA</td>
+                <td>Nominated for 1 Oscar. Another 38 wins &amp; 79 no...</td>
+                <td>8.1</td>
+                <td>1519557910</td>
+                <td>220000000</td>
+                </tr>
+                <tr>
+                <th>17</th>
+                <td>Pirates of the Caribbean: On Stranger Tides</td>
+                <td>2011</td>
+                <td>PG-13</td>
+                <td>136</td>
+                <td>Action, Adventure, Fantasy</td>
+                <td>Rob Marshall</td>
+                <td>Ted Elliott (screenplay), Terry Rossio (screen...</td>
+                <td>English, Spanish</td>
+                <td>USA, UK</td>
+                <td>2 wins &amp; 31 nominations.</td>
+                <td>6.6</td>
+                <td>1045713802</td>
+                <td>380000000</td>
+                </tr>
+                <tr>
+                <th>18</th>
+                <td>Men in Black 3</td>
+                <td>2012</td>
+                <td>PG-13</td>
+                <td>106</td>
+                <td>Action, Adventure, Comedy, Sci-Fi</td>
+                <td>Barry Sonnenfeld</td>
+                <td>Etan Cohen, Lowell Cunningham (based on the Ma...</td>
+                <td>English, Ukrainian</td>
+                <td>USA, United Arab Emirates</td>
+                <td>1 win &amp; 13 nominations.</td>
+                <td>6.8</td>
+                <td>624026776</td>
+                <td>225000000</td>
+                </tr>
+                <tr>
+                <th>19</th>
+                <td>The Hobbit: The Battle of the Five Armies</td>
+                <td>2014</td>
+                <td>PG-13</td>
+                <td>144</td>
+                <td>Adventure, Fantasy</td>
+                <td>Peter Jackson</td>
+                <td>Fran Walsh (screenplay), Philippa Boyens (scre...</td>
+                <td>English</td>
+                <td>New Zealand, USA</td>
+                <td>Nominated for 1 Oscar. Another 7 wins &amp; 51 nom...</td>
+                <td>7.4</td>
+                <td>956019788</td>
+                <td>250000000</td>
+                </tr>
+                <tr>
+                <th>20</th>
+                <td>The Amazing Spider-Man</td>
+                <td>2012</td>
+                <td>PG-13</td>
+                <td>136</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Marc Webb</td>
+                <td>James Vanderbilt (screenplay), Alvin Sargent (...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>2 wins &amp; 31 nominations.</td>
+                <td>7.0</td>
+                <td>752215857</td>
+                <td>215000000</td>
+                </tr>
+                <tr>
+                <th>21</th>
+                <td>Robin Hood</td>
+                <td>2010</td>
+                <td>PG-13</td>
+                <td>140</td>
+                <td>Action, Adventure, Drama, History, Romance</td>
+                <td>Ridley Scott</td>
+                <td>Brian Helgeland (screenplay), Brian Helgeland ...</td>
+                <td>English, French, Ukrainian</td>
+                <td>USA, UK</td>
+                <td>1 win &amp; 14 nominations.</td>
+                <td>6.6</td>
+                <td>310669540</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>22</th>
+                <td>The Hobbit: The Desolation of Smaug</td>
+                <td>2013</td>
+                <td>PG-13</td>
+                <td>161</td>
+                <td>Adventure, Fantasy</td>
+                <td>Peter Jackson</td>
+                <td>Fran Walsh (screenplay), Philippa Boyens (scre...</td>
+                <td>English</td>
+                <td>USA, New Zealand</td>
+                <td>Nominated for 3 Oscars. Another 16 wins &amp; 86 n...</td>
+                <td>7.8</td>
+                <td>958400000</td>
+                <td>250000000</td>
+                </tr>
+                <tr>
+                <th>23</th>
+                <td>The Golden Compass</td>
+                <td>2007</td>
+                <td>PG-13</td>
+                <td>113</td>
+                <td>Adventure, Family, Fantasy</td>
+                <td>Chris Weitz</td>
+                <td>Chris Weitz (screenplay), Philip Pullman (novel)</td>
+                <td>English, Icelandic, Russian, French</td>
+                <td>UK, USA</td>
+                <td>Won 1 Oscar. Another 6 wins &amp; 32 nominations.</td>
+                <td>6.1</td>
+                <td>372234864</td>
+                <td>180000000</td>
+                </tr>
+                <tr>
+                <th>24</th>
+                <td>King Kong</td>
+                <td>2005</td>
+                <td>PG-13</td>
+                <td>187</td>
+                <td>Action, Adventure, Drama, Romance</td>
+                <td>Peter Jackson</td>
+                <td>Fran Walsh (screenplay), Philippa Boyens (scre...</td>
+                <td>English</td>
+                <td>New Zealand, USA, Germany</td>
+                <td>Won 3 Oscars. Another 43 wins &amp; 100 nominations.</td>
+                <td>7.2</td>
+                <td>550000000</td>
+                <td>207000000</td>
+                </tr>
+                <tr>
+                <th>25</th>
+                <td>Titanic</td>
+                <td>1997</td>
+                <td>PG-13</td>
+                <td>194</td>
+                <td>Drama, Romance</td>
+                <td>James Cameron</td>
+                <td>James Cameron</td>
+                <td>English, Swedish, Italian</td>
+                <td>USA</td>
+                <td>Won 11 Oscars. Another 111 wins &amp; 77 nominations.</td>
+                <td>7.8</td>
+                <td>1845034188</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>26</th>
+                <td>Captain America: Civil War</td>
+                <td>2016</td>
+                <td>PG-13</td>
+                <td>147</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Anthony Russo, Joe Russo</td>
+                <td>Christopher Markus (screenplay by), Stephen Mc...</td>
+                <td>English, German, Xhosa, Russian, Romanian, Hindi</td>
+                <td>USA</td>
+                <td>16 wins &amp; 65 nominations.</td>
+                <td>7.8</td>
+                <td>1153304495</td>
+                <td>250000000</td>
+                </tr>
+                <tr>
+                <th>27</th>
+                <td>Battleship</td>
+                <td>2012</td>
+                <td>PG-13</td>
+                <td>131</td>
+                <td>Action, Adventure, Sci-Fi, Thriller</td>
+                <td>Peter Berg</td>
+                <td>Jon Hoeber, Erich Hoeber</td>
+                <td>English, Japanese</td>
+                <td>USA</td>
+                <td>4 wins &amp; 15 nominations.</td>
+                <td>5.8</td>
+                <td>303025485</td>
+                <td>209000000</td>
+                </tr>
+                <tr>
+                <th>28</th>
+                <td>Jurassic World</td>
+                <td>2015</td>
+                <td>PG-13</td>
+                <td>124</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Colin Trevorrow</td>
+                <td>Rick Jaffa (screenplay by), Amanda Silver (scr...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>14 wins &amp; 57 nominations.</td>
+                <td>7.0</td>
+                <td>1513528810</td>
+                <td>150000000</td>
+                </tr>
+                <tr>
+                <th>29</th>
+                <td>Skyfall</td>
+                <td>2012</td>
+                <td>PG-13</td>
+                <td>143</td>
+                <td>Action, Adventure, Thriller</td>
+                <td>Sam Mendes</td>
+                <td>Neal Purvis, Robert Wade, John Logan, Ian Flem...</td>
+                <td>English, Turkish, Shanghainese, Portuguese, Ja...</td>
+                <td>UK, USA</td>
+                <td>Won 2 Oscars. Another 65 wins &amp; 119 nominations.</td>
+                <td>7.8</td>
+                <td>1108561013</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>30</th>
+                <td>Spider-Man 2</td>
+                <td>2004</td>
+                <td>PG-13</td>
+                <td>127</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Sam Raimi</td>
+                <td>Stan Lee (comic book), Steve Ditko (comic book...</td>
+                <td>English, Russian, Chinese</td>
+                <td>USA</td>
+                <td>Won 1 Oscar. Another 23 wins &amp; 59 nominations.</td>
+                <td>7.3</td>
+                <td>783766341</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>31</th>
+                <td>Iron Man 3</td>
+                <td>2013</td>
+                <td>PG-13</td>
+                <td>130</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Shane Black</td>
+                <td>Drew Pearce (screenplay by), Shane Black (scre...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Nominated for 1 Oscar. Another 17 wins &amp; 61 no...</td>
+                <td>7.2</td>
+                <td>1215439994</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>32</th>
+                <td>Alice in Wonderland</td>
+                <td>2010</td>
+                <td>PG</td>
+                <td>108</td>
+                <td>Adventure, Family, Fantasy</td>
+                <td>Tim Burton</td>
+                <td>Linda Woolverton (screenplay), Lewis Carroll (...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Won 2 Oscars. Another 31 wins &amp; 62 nominations.</td>
+                <td>6.5</td>
+                <td>1025491110</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>33</th>
+                <td>X-Men: The Last Stand</td>
+                <td>2006</td>
+                <td>PG-13</td>
+                <td>104</td>
+                <td>Action, Adventure, Sci-Fi, Thriller</td>
+                <td>Brett Ratner</td>
+                <td>Simon Kinberg, Zak Penn</td>
+                <td>English</td>
+                <td>Canada, USA, UK</td>
+                <td>7 wins &amp; 37 nominations.</td>
+                <td>6.7</td>
+                <td>459359555</td>
+                <td>210000000</td>
+                </tr>
+                <tr>
+                <th>34</th>
+                <td>Monsters University</td>
+                <td>2013</td>
+                <td>G</td>
+                <td>104</td>
+                <td>Animation, Adventure, Comedy, Family, Fantasy</td>
+                <td>Dan Scanlon</td>
+                <td>Dan Scanlon (story by), Daniel Gerson (story b...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Nominated for 1 BAFTA Film Award. Another 9 wi...</td>
+                <td>7.3</td>
+                <td>743559607</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>35</th>
+                <td>Transformers: Revenge of the Fallen</td>
+                <td>2009</td>
+                <td>PG-13</td>
+                <td>150</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Michael Bay</td>
+                <td>Ehren Kruger, Roberto Orci, Alex Kurtzman</td>
+                <td>English, Spanish</td>
+                <td>USA</td>
+                <td>Nominated for 1 Oscar. Another 15 wins &amp; 27 no...</td>
+                <td>6.0</td>
+                <td>836297228</td>
+                <td>150000000</td>
+                </tr>
+                <tr>
+                <th>36</th>
+                <td>Transformers: Age of Extinction</td>
+                <td>2014</td>
+                <td>PG-13</td>
+                <td>165</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Michael Bay</td>
+                <td>Ehren Kruger</td>
+                <td>English</td>
+                <td>USA, China, Hong Kong</td>
+                <td>5 wins &amp; 23 nominations.</td>
+                <td>5.7</td>
+                <td>1091405097</td>
+                <td>210000000</td>
+                </tr>
+                <tr>
+                <th>37</th>
+                <td>The Amazing Spider-Man 2</td>
+                <td>2014</td>
+                <td>PG-13</td>
+                <td>142</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Marc Webb</td>
+                <td>Alex Kurtzman (screenplay), Roberto Orci (scre...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>3 wins &amp; 29 nominations.</td>
+                <td>6.6</td>
+                <td>705717432</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>38</th>
+                <td>TRON: Legacy</td>
+                <td>2010</td>
+                <td>PG</td>
+                <td>125</td>
+                <td>Action, Adventure, Fantasy, Sci-Fi</td>
+                <td>Joseph Kosinski</td>
+                <td>Edward Kitsis (screenplay), Adam Horowitz (scr...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Nominated for 1 Oscar. Another 10 wins &amp; 49 no...</td>
+                <td>6.8</td>
+                <td>400062763</td>
+                <td>170000000</td>
+                </tr>
+                <tr>
+                <th>39</th>
+                <td>Cars 2</td>
+                <td>2011</td>
+                <td>G</td>
+                <td>106</td>
+                <td>Animation, Adventure, Comedy, Family, Sport</td>
+                <td>John Lasseter, Bradford Lewis(co-director)</td>
+                <td>John Lasseter (original story by), Bradford Le...</td>
+                <td>English, Japanese, Italian, French</td>
+                <td>USA</td>
+                <td>Nominated for 1 Golden Globe. Another 1 win &amp; ...</td>
+                <td>6.2</td>
+                <td>559852396</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>40</th>
+                <td>Green Lantern</td>
+                <td>2011</td>
+                <td>PG-13</td>
+                <td>114</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Martin Campbell</td>
+                <td>Greg Berlanti (screenplay), Michael Green (scr...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>3 wins &amp; 6 nominations.</td>
+                <td>5.5</td>
+                <td>219851172</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>41</th>
+                <td>Toy Story 3</td>
+                <td>2010</td>
+                <td>G</td>
+                <td>103</td>
+                <td>Animation, Adventure, Comedy, Family, Fantasy</td>
+                <td>Lee Unkrich</td>
+                <td>John Lasseter (story by), Andrew Stanton (stor...</td>
+                <td>English, Spanish</td>
+                <td>USA</td>
+                <td>Won 2 Oscars. Another 58 wins &amp; 91 nominations.</td>
+                <td>8.3</td>
+                <td>1066969703</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>42</th>
+                <td>Terminator Salvation</td>
+                <td>2009</td>
+                <td>PG-13</td>
+                <td>115</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>McG</td>
+                <td>John Brancato, Michael Ferris</td>
+                <td>English, Italian</td>
+                <td>USA, Germany, UK, Italy</td>
+                <td>2 wins &amp; 13 nominations.</td>
+                <td>6.6</td>
+                <td>371353001</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>43</th>
+                <td>Furious 7</td>
+                <td>2015</td>
+                <td>PG-13</td>
+                <td>137</td>
+                <td>Action, Adventure, Thriller</td>
+                <td>James Wan</td>
+                <td>Chris Morgan, Gary Scott Thompson (characters)</td>
+                <td>English, Thai, Arabic, Spanish</td>
+                <td>USA, China, Japan, Canada, United Arab Emirates</td>
+                <td>Nominated for 1 Golden Globe. Another 28 wins ...</td>
+                <td>7.2</td>
+                <td>1506249360</td>
+                <td>190000000</td>
+                </tr>
+                <tr>
+                <th>44</th>
+                <td>World War Z</td>
+                <td>2013</td>
+                <td>PG-13</td>
+                <td>116</td>
+                <td>Action, Adventure, Horror, Sci-Fi, Thriller</td>
+                <td>Marc Forster</td>
+                <td>Matthew Michael Carnahan (screenplay), Drew Go...</td>
+                <td>English, Spanish, Hebrew, Arabic</td>
+                <td>USA, UK, Malta</td>
+                <td>3 wins &amp; 24 nominations.</td>
+                <td>7.0</td>
+                <td>531865000</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>45</th>
+                <td>X-Men: Days of Future Past</td>
+                <td>2014</td>
+                <td>PG-13</td>
+                <td>132</td>
+                <td>Action, Adventure, Sci-Fi, Thriller</td>
+                <td>Bryan Singer</td>
+                <td>Simon Kinberg (screenplay by), Jane Goldman (s...</td>
+                <td>English, Vietnamese, French</td>
+                <td>USA, UK, Canada</td>
+                <td>Nominated for 1 Oscar. Another 15 wins &amp; 47 no...</td>
+                <td>8.0</td>
+                <td>747862775</td>
+                <td>250000000</td>
+                </tr>
+                <tr>
+                <th>46</th>
+                <td>Star Trek Into Darkness</td>
+                <td>2013</td>
+                <td>PG-13</td>
+                <td>132</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>J.J. Abrams</td>
+                <td>Roberto Orci, Alex Kurtzman, Damon Lindelof, G...</td>
+                <td>English, Klingon</td>
+                <td>USA</td>
+                <td>Nominated for 1 Oscar. Another 6 wins &amp; 56 nom...</td>
+                <td>7.7</td>
+                <td>467365246</td>
+                <td>190000000</td>
+                </tr>
+                <tr>
+                <th>47</th>
+                <td>Jack the Giant Slayer</td>
+                <td>2013</td>
+                <td>PG-13</td>
+                <td>114</td>
+                <td>Adventure, Fantasy</td>
+                <td>Bryan Singer</td>
+                <td>Darren Lemke (screenplay), Christopher McQuarr...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>1 win &amp; 4 nominations.</td>
+                <td>6.3</td>
+                <td>197687603</td>
+                <td>195000000</td>
+                </tr>
+                <tr>
+                <th>48</th>
+                <td>The Great Gatsby</td>
+                <td>2013</td>
+                <td>PG-13</td>
+                <td>143</td>
+                <td>Drama, Romance</td>
+                <td>Baz Luhrmann</td>
+                <td>Baz Luhrmann (screenplay), Craig Pearce (scree...</td>
+                <td>English</td>
+                <td>Australia, USA</td>
+                <td>Won 2 Oscars. Another 47 wins &amp; 83 nominations.</td>
+                <td>7.3</td>
+                <td>351040419</td>
+                <td>105000000</td>
+                </tr>
+                <tr>
+                <th>49</th>
+                <td>Prince of Persia: The Sands of Time</td>
+                <td>2010</td>
+                <td>PG-13</td>
+                <td>116</td>
+                <td>Action, Adventure, Fantasy</td>
+                <td>Mike Newell</td>
+                <td>Boaz Yakin (screenplay), Doug Miro (screenplay...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>1 win &amp; 10 nominations.</td>
+                <td>6.6</td>
+                <td>335154643</td>
+                <td>150000000</td>
+                </tr>
+                <tr>
+                <th>50</th>
+                <td>Pacific Rim</td>
+                <td>2013</td>
+                <td>PG-13</td>
+                <td>131</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Guillermo del Toro</td>
+                <td>Travis Beacham (screenplay), Guillermo del Tor...</td>
+                <td>English, Japanese, Cantonese, Mandarin</td>
+                <td>USA</td>
+                <td>Nominated for 1 BAFTA Film Award. Another 6 wi...</td>
+                <td>6.9</td>
+                <td>407602906</td>
+                <td>180000000</td>
+                </tr>
+                <tr>
+                <th>51</th>
+                <td>Transformers: Dark of the Moon</td>
+                <td>2011</td>
+                <td>PG-13</td>
+                <td>154</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Michael Bay</td>
+                <td>Ehren Kruger</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Nominated for 3 Oscars. Another 10 wins &amp; 39 n...</td>
+                <td>6.3</td>
+                <td>1123746996</td>
+                <td>195000000</td>
+                </tr>
+                <tr>
+                <th>52</th>
+                <td>Indiana Jones and the Kingdom of the Crystal S...</td>
+                <td>2008</td>
+                <td>PG-13</td>
+                <td>122</td>
+                <td>Action, Adventure</td>
+                <td>Steven Spielberg</td>
+                <td>David Koepp (screenplay), George Lucas (story)...</td>
+                <td>English, German, Russian</td>
+                <td>USA</td>
+                <td>Nominated for 1 BAFTA Film Award. Another 10 w...</td>
+                <td>6.2</td>
+                <td>786636033</td>
+                <td>185000000</td>
+                </tr>
+                <tr>
+                <th>53</th>
+                <td>The Good Dinosaur</td>
+                <td>2015</td>
+                <td>PG</td>
+                <td>93</td>
+                <td>Animation, Adventure, Comedy, Drama, Family, F...</td>
+                <td>Peter Sohn</td>
+                <td>Bob Peterson (original concept &amp; development b...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Nominated for 1 Golden Globe. Another 7 wins &amp;...</td>
+                <td>6.7</td>
+                <td>331926147</td>
+                <td>175000000</td>
+                </tr>
+                <tr>
+                <th>54</th>
+                <td>Brave</td>
+                <td>2012</td>
+                <td>PG</td>
+                <td>93</td>
+                <td>Animation, Adventure, Comedy, Family, Fantasy</td>
+                <td>Mark Andrews, Brenda Chapman, Steve Purcell(co...</td>
+                <td>Brenda Chapman (story by), Mark Andrews (scree...</td>
+                <td>English</td>
+                <td>USA, UK</td>
+                <td>Won 1 Oscar. Another 18 wins &amp; 48 nominations.</td>
+                <td>7.1</td>
+                <td>538983207</td>
+                <td>185000000</td>
+                </tr>
+                <tr>
+                <th>55</th>
+                <td>Star Trek Beyond</td>
+                <td>2016</td>
+                <td>PG-13</td>
+                <td>122</td>
+                <td>Action, Adventure, Sci-Fi, Thriller</td>
+                <td>Justin Lin</td>
+                <td>Simon Pegg, Doug Jung, Gene Roddenberry (based...</td>
+                <td>English</td>
+                <td>USA, China, United Arab Emirates, Canada</td>
+                <td>Nominated for 1 Oscar. Another 3 wins &amp; 27 nom...</td>
+                <td>7.1</td>
+                <td>343471816</td>
+                <td>185000000</td>
+                </tr>
+                <tr>
+                <th>56</th>
+                <td>WALL·E</td>
+                <td>2008</td>
+                <td>G</td>
+                <td>98</td>
+                <td>Animation, Adventure, Family, Sci-Fi</td>
+                <td>Andrew Stanton</td>
+                <td>Andrew Stanton (original story by), Pete Docte...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Won 1 Oscar. Another 89 wins &amp; 90 nominations.</td>
+                <td>8.4</td>
+                <td>521311860</td>
+                <td>180000000</td>
+                </tr>
+                <tr>
+                <th>57</th>
+                <td>Rush Hour 3</td>
+                <td>2007</td>
+                <td>PG-13</td>
+                <td>91</td>
+                <td>Action, Comedy, Crime, Thriller</td>
+                <td>Brett Ratner</td>
+                <td>Jeff Nathanson, Ross LaManna (characters)</td>
+                <td>English, French, Japanese, Mandarin, Latin</td>
+                <td>USA, Germany</td>
+                <td>9 nominations.</td>
+                <td>6.2</td>
+                <td>258022233</td>
+                <td>140000000</td>
+                </tr>
+                <tr>
+                <th>58</th>
+                <td>2012</td>
+                <td>2009</td>
+                <td>PG-13</td>
+                <td>158</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Roland Emmerich</td>
+                <td>Roland Emmerich, Harald Kloser</td>
+                <td>English, French, Tibetan, Mandarin, Russian, H...</td>
+                <td>USA</td>
+                <td>5 wins &amp; 21 nominations.</td>
+                <td>5.8</td>
+                <td>769653595</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>59</th>
+                <td>A Christmas Carol</td>
+                <td>2009</td>
+                <td>PG</td>
+                <td>96</td>
+                <td>Animation, Drama, Family, Fantasy</td>
+                <td>Robert Zemeckis</td>
+                <td>Robert Zemeckis (screenplay), Charles Dickens ...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>3 wins &amp; 5 nominations.</td>
+                <td>6.8</td>
+                <td>325233863</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>60</th>
+                <td>Jupiter Ascending</td>
+                <td>2015</td>
+                <td>PG-13</td>
+                <td>127</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Lana Wachowski, Lilly Wachowski</td>
+                <td>Lilly Wachowski, Lana Wachowski</td>
+                <td>English, Russian</td>
+                <td>USA, Australia</td>
+                <td>4 wins &amp; 16 nominations.</td>
+                <td>5.3</td>
+                <td>183987723</td>
+                <td>176000003</td>
+                </tr>
+                <tr>
+                <th>61</th>
+                <td>The Legend of Tarzan</td>
+                <td>2016</td>
+                <td>PG-13</td>
+                <td>110</td>
+                <td>Action, Adventure, Drama, Fantasy, Romance</td>
+                <td>David Yates</td>
+                <td>Adam Cozad (screenplay by), Craig Brewer (scre...</td>
+                <td>English, Lingala, French</td>
+                <td>UK, Canada, USA</td>
+                <td>2 wins &amp; 4 nominations.</td>
+                <td>6.3</td>
+                <td>356743061</td>
+                <td>180000000</td>
+                </tr>
+                <tr>
+                <th>62</th>
+                <td>The Chronicles of Narnia: The Lion, the Witch ...</td>
+                <td>2005</td>
+                <td>PG</td>
+                <td>143</td>
+                <td>Adventure, Family, Fantasy</td>
+                <td>Andrew Adamson</td>
+                <td>Ann Peacock (screenplay), Andrew Adamson (scre...</td>
+                <td>English, German, Brazilian Sign Language</td>
+                <td>USA, UK</td>
+                <td>Won 1 Oscar. Another 14 wins &amp; 46 nominations.</td>
+                <td>6.9</td>
+                <td>748806957</td>
+                <td>180000000</td>
+                </tr>
+                <tr>
+                <th>63</th>
+                <td>X-Men: Apocalypse</td>
+                <td>2016</td>
+                <td>PG-13</td>
+                <td>144</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Bryan Singer</td>
+                <td>Simon Kinberg (screenplay by), Bryan Singer (s...</td>
+                <td>English, Polish, German, Arabic, Egyptian (Anc...</td>
+                <td>USA</td>
+                <td>1 win &amp; 14 nominations.</td>
+                <td>7.0</td>
+                <td>543934787</td>
+                <td>178000000</td>
+                </tr>
+                <tr>
+                <th>64</th>
+                <td>The Dark Knight</td>
+                <td>2008</td>
+                <td>PG-13</td>
+                <td>152</td>
+                <td>Action, Crime, Drama, Thriller</td>
+                <td>Christopher Nolan</td>
+                <td>Jonathan Nolan (screenplay), Christopher Nolan...</td>
+                <td>English, Mandarin</td>
+                <td>USA, UK</td>
+                <td>Won 2 Oscars. Another 152 wins &amp; 155 nominations.</td>
+                <td>9.0</td>
+                <td>1004558444</td>
+                <td>185000000</td>
+                </tr>
+                <tr>
+                <th>65</th>
+                <td>Up</td>
+                <td>2009</td>
+                <td>PG</td>
+                <td>96</td>
+                <td>Animation, Adventure, Comedy, Family</td>
+                <td>Pete Docter, Bob Peterson(co-director)</td>
+                <td>Pete Docter (story by), Bob Peterson (story by...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Won 2 Oscars. Another 74 wins &amp; 81 nominations.</td>
+                <td>8.2</td>
+                <td>735099082</td>
+                <td>175000000</td>
+                </tr>
+                <tr>
+                <th>66</th>
+                <td>Iron Man</td>
+                <td>2008</td>
+                <td>PG-13</td>
+                <td>126</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Jon Favreau</td>
+                <td>Mark Fergus (screenplay), Hawk Ostby (screenpl...</td>
+                <td>English, Persian, Urdu, Arabic, Hungarian</td>
+                <td>USA</td>
+                <td>Nominated for 2 Oscars. Another 20 wins &amp; 65 n...</td>
+                <td>7.9</td>
+                <td>585174222</td>
+                <td>140000000</td>
+                </tr>
+                <tr>
+                <th>67</th>
+                <td>Hugo</td>
+                <td>2011</td>
+                <td>PG</td>
+                <td>126</td>
+                <td>Adventure, Drama, Family, Fantasy, Mystery, Ro...</td>
+                <td>Martin Scorsese</td>
+                <td>John Logan (screenplay by), Brian Selznick (ba...</td>
+                <td>English</td>
+                <td>USA, UK, France</td>
+                <td>Won 5 Oscars. Another 57 wins &amp; 186 nominations.</td>
+                <td>7.5</td>
+                <td>185770160</td>
+                <td>170000000</td>
+                </tr>
+                <tr>
+                <th>68</th>
+                <td>Wild Wild West</td>
+                <td>1999</td>
+                <td>PG-13</td>
+                <td>106</td>
+                <td>Action, Comedy, Sci-Fi, Western</td>
+                <td>Barry Sonnenfeld</td>
+                <td>Jim Thomas (story), John Thomas (story), S.S. ...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>15 wins &amp; 17 nominations.</td>
+                <td>4.9</td>
+                <td>222104681</td>
+                <td>170000000</td>
+                </tr>
+                <tr>
+                <th>69</th>
+                <td>The Mummy: Tomb of the Dragon Emperor</td>
+                <td>2008</td>
+                <td>PG-13</td>
+                <td>112</td>
+                <td>Action, Adventure, Fantasy, Horror, Thriller</td>
+                <td>Rob Cohen</td>
+                <td>Alfred Gough, Miles Millar</td>
+                <td>English, Mandarin, Sanskrit</td>
+                <td>USA, Germany, China, Canada</td>
+                <td>2 wins &amp; 6 nominations.</td>
+                <td>5.2</td>
+                <td>401128639</td>
+                <td>145000000</td>
+                </tr>
+                <tr>
+                <th>70</th>
+                <td>Suicide Squad</td>
+                <td>2016</td>
+                <td>PG-13</td>
+                <td>123</td>
+                <td>Action, Adventure, Fantasy, Sci-Fi</td>
+                <td>David Ayer</td>
+                <td>David Ayer</td>
+                <td>English, Japanese, Spanish</td>
+                <td>USA</td>
+                <td>Won 1 Oscar. Another 16 wins &amp; 37 nominations.</td>
+                <td>6.0</td>
+                <td>745000000</td>
+                <td>175000000</td>
+                </tr>
+                <tr>
+                <th>71</th>
+                <td>Evan Almighty</td>
+                <td>2007</td>
+                <td>PG</td>
+                <td>96</td>
+                <td>Comedy, Family, Fantasy</td>
+                <td>Tom Shadyac</td>
+                <td>Steve Oedekerk (screenplay), Steve Oedekerk (s...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>2 wins &amp; 11 nominations.</td>
+                <td>5.4</td>
+                <td>173000000</td>
+                <td>175000000</td>
+                </tr>
+                <tr>
+                <th>72</th>
+                <td>Edge of Tomorrow</td>
+                <td>2014</td>
+                <td>PG-13</td>
+                <td>113</td>
+                <td>Action, Sci-Fi</td>
+                <td>Doug Liman</td>
+                <td>Christopher McQuarrie (screenplay by), Jez But...</td>
+                <td>English</td>
+                <td>USA, Canada</td>
+                <td>11 wins &amp; 37 nominations.</td>
+                <td>7.9</td>
+                <td>370541256</td>
+                <td>178000000</td>
+                </tr>
+                <tr>
+                <th>73</th>
+                <td>Waterworld</td>
+                <td>1995</td>
+                <td>PG-13</td>
+                <td>135</td>
+                <td>Action, Adventure, Sci-Fi, Thriller</td>
+                <td>Kevin Reynolds</td>
+                <td>Peter Rader, David Twohy</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Nominated for 1 Oscar. Another 5 wins &amp; 8 nomi...</td>
+                <td>6.2</td>
+                <td>264218220</td>
+                <td>175000000</td>
+                </tr>
+                <tr>
+                <th>74</th>
+                <td>G.I. Joe: The Rise of Cobra</td>
+                <td>2009</td>
+                <td>PG-13</td>
+                <td>118</td>
+                <td>Action, Adventure, Sci-Fi, Thriller</td>
+                <td>Stephen Sommers</td>
+                <td>Stuart Beattie (screenplay), David Elliot (scr...</td>
+                <td>English, French, Scottish Gaelic</td>
+                <td>USA, Czech Republic</td>
+                <td>3 wins &amp; 16 nominations.</td>
+                <td>5.8</td>
+                <td>302469017</td>
+                <td>175000000</td>
+                </tr>
+                <tr>
+                <th>75</th>
+                <td>Inside Out</td>
+                <td>2015</td>
+                <td>PG</td>
+                <td>95</td>
+                <td>Animation, Adventure, Comedy, Drama, Family, F...</td>
+                <td>Pete Docter, Ronnie Del Carmen(co-director)</td>
+                <td>Pete Docter (original story by), Ronnie Del Ca...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Won 1 Oscar. Another 93 wins &amp; 112 nominations.</td>
+                <td>8.2</td>
+                <td>857611174</td>
+                <td>175000000</td>
+                </tr>
+                <tr>
+                <th>76</th>
+                <td>The Jungle Book</td>
+                <td>2016</td>
+                <td>PG</td>
+                <td>106</td>
+                <td>Adventure, Drama, Family, Fantasy</td>
+                <td>Jon Favreau</td>
+                <td>Justin Marks (screenplay by), Rudyard Kipling ...</td>
+                <td>English</td>
+                <td>UK, USA</td>
+                <td>Won 1 Oscar. Another 31 wins &amp; 54 nominations.</td>
+                <td>7.4</td>
+                <td>966550600</td>
+                <td>175000000</td>
+                </tr>
+                <tr>
+                <th>77</th>
+                <td>Iron Man 2</td>
+                <td>2010</td>
+                <td>PG-13</td>
+                <td>124</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Jon Favreau</td>
+                <td>Justin Theroux (screenplay), Stan Lee (Marvel ...</td>
+                <td>English, French, Russian</td>
+                <td>USA</td>
+                <td>Nominated for 1 Oscar. Another 7 wins &amp; 42 nom...</td>
+                <td>7.0</td>
+                <td>623933331</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>78</th>
+                <td>Snow White and the Huntsman</td>
+                <td>2012</td>
+                <td>PG-13</td>
+                <td>127</td>
+                <td>Action, Adventure, Drama, Fantasy</td>
+                <td>Rupert Sanders</td>
+                <td>Evan Daugherty (screenplay), John Lee Hancock ...</td>
+                <td>English</td>
+                <td>USA, UK</td>
+                <td>Nominated for 2 Oscars. Another 13 wins &amp; 31 n...</td>
+                <td>6.1</td>
+                <td>396600000</td>
+                <td>170000000</td>
+                </tr>
+                <tr>
+                <th>79</th>
+                <td>Maleficent</td>
+                <td>2014</td>
+                <td>PG</td>
+                <td>97</td>
+                <td>Action, Adventure, Family, Fantasy, Romance</td>
+                <td>Robert Stromberg</td>
+                <td>Linda Woolverton (screenplay by), Charles Perr...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Nominated for 1 Oscar. Another 10 wins &amp; 42 no...</td>
+                <td>7.0</td>
+                <td>758539785</td>
+                <td>180000000</td>
+                </tr>
+                <tr>
+                <th>80</th>
+                <td>Dawn of the Planet of the Apes</td>
+                <td>2014</td>
+                <td>PG-13</td>
+                <td>130</td>
+                <td>Action, Adventure, Drama, Sci-Fi</td>
+                <td>Matt Reeves</td>
+                <td>Mark Bomback, Rick Jaffa, Amanda Silver, Rick ...</td>
+                <td>English, American Sign Language</td>
+                <td>USA, UK, Canada</td>
+                <td>Nominated for 1 Oscar. Another 16 wins &amp; 47 no...</td>
+                <td>7.6</td>
+                <td>710644566</td>
+                <td>170000000</td>
+                </tr>
+                <tr>
+                <th>81</th>
+                <td>The Lovers</td>
+                <td>1958</td>
+                <td>Not Rated</td>
+                <td>90</td>
+                <td>Drama, Romance</td>
+                <td>Louis Malle</td>
+                <td>Louise de Vilmorin (dialogue)</td>
+                <td>French</td>
+                <td>France</td>
+                <td>2 wins &amp; 1 nomination.</td>
+                <td>7.3</td>
+                <td>0</td>
+                <td>27000000</td>
+                </tr>
+                <tr>
+                <th>82</th>
+                <td>47 Ronin</td>
+                <td>2013</td>
+                <td>PG-13</td>
+                <td>128</td>
+                <td>Action, Adventure, Drama, Fantasy</td>
+                <td>Carl Rinsch</td>
+                <td>Chris Morgan (screenplay), Hossein Amini (scre...</td>
+                <td>English, Japanese</td>
+                <td>USA, UK, Japan, Hungary</td>
+                <td>5 nominations.</td>
+                <td>6.3</td>
+                <td>150962475</td>
+                <td>175000000</td>
+                </tr>
+                <tr>
+                <th>83</th>
+                <td>Captain America: The Winter Soldier</td>
+                <td>2014</td>
+                <td>PG-13</td>
+                <td>136</td>
+                <td>Action, Adventure, Sci-Fi, Thriller</td>
+                <td>Anthony Russo, Joe Russo</td>
+                <td>Christopher Markus (screenplay by), Stephen Mc...</td>
+                <td>English, French</td>
+                <td>USA</td>
+                <td>Nominated for 1 Oscar. Another 5 wins &amp; 50 nom...</td>
+                <td>7.8</td>
+                <td>714766572</td>
+                <td>170000000</td>
+                </tr>
+                <tr>
+                <th>84</th>
+                <td>Shrek Forever After</td>
+                <td>2010</td>
+                <td>PG</td>
+                <td>93</td>
+                <td>Animation, Adventure, Comedy, Family, Fantasy,...</td>
+                <td>Mike Mitchell</td>
+                <td>William Steig (based upon the book by), Josh K...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>1 win &amp; 13 nominations.</td>
+                <td>6.3</td>
+                <td>752600867</td>
+                <td>165000000</td>
+                </tr>
+                <tr>
+                <th>85</th>
+                <td>Tomorrowland</td>
+                <td>2015</td>
+                <td>PG</td>
+                <td>130</td>
+                <td>Action, Adventure, Family, Fantasy, Mystery, S...</td>
+                <td>Brad Bird</td>
+                <td>Damon Lindelof (screenplay by), Brad Bird (scr...</td>
+                <td>English, French, Japanese</td>
+                <td>USA, Spain, France, UK</td>
+                <td>2 wins &amp; 17 nominations.</td>
+                <td>6.4</td>
+                <td>209154322</td>
+                <td>190000000</td>
+                </tr>
+                <tr>
+                <th>86</th>
+                <td>Big Hero 6</td>
+                <td>2014</td>
+                <td>PG</td>
+                <td>102</td>
+                <td>Animation, Action, Adventure, Comedy, Family, ...</td>
+                <td>Don Hall, Chris Williams</td>
+                <td>Jordan Roberts (screenplay by), Robert L. Bair...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Won 1 Oscar. Another 16 wins &amp; 57 nominations.</td>
+                <td>7.8</td>
+                <td>652105443</td>
+                <td>165000000</td>
+                </tr>
+                <tr>
+                <th>87</th>
+                <td>Wreck-It Ralph</td>
+                <td>2012</td>
+                <td>PG</td>
+                <td>101</td>
+                <td>Animation, Adventure, Comedy, Family, Fantasy</td>
+                <td>Rich Moore</td>
+                <td>Rich Moore (story by), Phil Johnston (story by...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Nominated for 1 Oscar. Another 33 wins &amp; 41 no...</td>
+                <td>7.7</td>
+                <td>471222889</td>
+                <td>165000000</td>
+                </tr>
+                <tr>
+                <th>88</th>
+                <td>The Polar Express</td>
+                <td>2004</td>
+                <td>G</td>
+                <td>100</td>
+                <td>Animation, Adventure, Comedy, Family, Fantasy,...</td>
+                <td>Robert Zemeckis</td>
+                <td>Chris Van Allsburg (book), Robert Zemeckis (sc...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Nominated for 3 Oscars. Another 5 wins &amp; 23 no...</td>
+                <td>6.6</td>
+                <td>305875730</td>
+                <td>165000000</td>
+                </tr>
+                <tr>
+                <th>89</th>
+                <td>Independence Day: Resurgence</td>
+                <td>2016</td>
+                <td>PG-13</td>
+                <td>120</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Roland Emmerich</td>
+                <td>Nicolas Wright (screenplay by), James A. Woods...</td>
+                <td>English, Mandarin</td>
+                <td>USA</td>
+                <td>3 wins &amp; 16 nominations.</td>
+                <td>5.2</td>
+                <td>389681935</td>
+                <td>165000000</td>
+                </tr>
+                <tr>
+                <th>90</th>
+                <td>How to Train Your Dragon</td>
+                <td>2010</td>
+                <td>PG</td>
+                <td>98</td>
+                <td>Animation, Action, Adventure, Family, Fantasy</td>
+                <td>Dean DeBlois, Chris Sanders</td>
+                <td>William Davies (screenplay by), Dean DeBlois (...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Nominated for 2 Oscars. Another 25 wins &amp; 60 n...</td>
+                <td>8.1</td>
+                <td>494878759</td>
+                <td>165000000</td>
+                </tr>
+                <tr>
+                <th>91</th>
+                <td>Terminator 3: Rise of the Machines</td>
+                <td>2003</td>
+                <td>R</td>
+                <td>109</td>
+                <td>Action, Sci-Fi</td>
+                <td>Jonathan Mostow</td>
+                <td>James Cameron (characters), Gale Anne Hurd (ch...</td>
+                <td>English</td>
+                <td>USA, Germany, UK</td>
+                <td>3 wins &amp; 21 nominations.</td>
+                <td>6.3</td>
+                <td>435000000</td>
+                <td>200000000</td>
+                </tr>
+                <tr>
+                <th>92</th>
+                <td>Guardians of the Galaxy</td>
+                <td>2014</td>
+                <td>PG-13</td>
+                <td>121</td>
+                <td>Action, Adventure, Comedy, Sci-Fi</td>
+                <td>James Gunn</td>
+                <td>James Gunn, Nicole Perlman, Dan Abnett (based ...</td>
+                <td>English</td>
+                <td>USA</td>
+                <td>Nominated for 2 Oscars. Another 52 wins &amp; 99 n...</td>
+                <td>8.1</td>
+                <td>773328629</td>
+                <td>170000000</td>
+                </tr>
+                <tr>
+                <th>93</th>
+                <td>Interstellar</td>
+                <td>2014</td>
+                <td>PG-13</td>
+                <td>169</td>
+                <td>Adventure, Drama, Sci-Fi</td>
+                <td>Christopher Nolan</td>
+                <td>Jonathan Nolan, Christopher Nolan</td>
+                <td>English</td>
+                <td>USA, UK, Canada</td>
+                <td>Won 1 Oscar. Another 43 wins &amp; 143 nominations.</td>
+                <td>8.6</td>
+                <td>675120017</td>
+                <td>165000000</td>
+                </tr>
+                <tr>
+                <th>94</th>
+                <td>Inception</td>
+                <td>2010</td>
+                <td>PG-13</td>
+                <td>148</td>
+                <td>Action, Adventure, Sci-Fi, Thriller</td>
+                <td>Christopher Nolan</td>
+                <td>Christopher Nolan</td>
+                <td>English, Japanese, French</td>
+                <td>USA, UK</td>
+                <td>Won 4 Oscars. Another 152 wins &amp; 204 nominations.</td>
+                <td>8.8</td>
+                <td>825532764</td>
+                <td>160000000</td>
+                </tr>
+                <tr>
+                <th>95</th>
+                <td>Shin Godzilla</td>
+                <td>2016</td>
+                <td>Not Rated</td>
+                <td>120</td>
+                <td>Action, Adventure, Drama, Horror, Sci-Fi</td>
+                <td>Hideaki Anno, Shinji Higuchi(co-director)</td>
+                <td>Hideaki Anno, Sean Whitley (english version)</td>
+                <td>Japanese, Japanese Sign Language, English, German</td>
+                <td>Japan</td>
+                <td>13 wins &amp; 9 nominations.</td>
+                <td>6.7</td>
+                <td>77000000</td>
+                <td>15000000</td>
+                </tr>
+                <tr>
+                <th>96</th>
+                <td>The Hobbit: An Unexpected Journey</td>
+                <td>2012</td>
+                <td>PG-13</td>
+                <td>169</td>
+                <td>Adventure, Family, Fantasy</td>
+                <td>Peter Jackson</td>
+                <td>Fran Walsh (screenplay), Philippa Boyens (scre...</td>
+                <td>English</td>
+                <td>USA, New Zealand</td>
+                <td>Nominated for 3 Oscars. Another 10 wins &amp; 72 n...</td>
+                <td>7.9</td>
+                <td>1021103568</td>
+                <td>250000000</td>
+                </tr>
+                <tr>
+                <th>97</th>
+                <td>The Fast and the Furious</td>
+                <td>2001</td>
+                <td>PG-13</td>
+                <td>106</td>
+                <td>Action, Crime, Thriller</td>
+                <td>Rob Cohen</td>
+                <td>Ken Li (magazine article "Racer X"), Gary Scot...</td>
+                <td>English, Spanish</td>
+                <td>USA, Germany</td>
+                <td>11 wins &amp; 12 nominations.</td>
+                <td>6.8</td>
+                <td>207283925</td>
+                <td>38000000</td>
+                </tr>
+                <tr>
+                <th>98</th>
+                <td>The Curious Case of Benjamin Button</td>
+                <td>2008</td>
+                <td>PG-13</td>
+                <td>166</td>
+                <td>Drama, Fantasy, Romance</td>
+                <td>David Fincher</td>
+                <td>Eric Roth (screenplay), Eric Roth (story), Rob...</td>
+                <td>English, Russian, French</td>
+                <td>USA</td>
+                <td>Won 3 Oscars. Another 77 wins &amp; 155 nominations.</td>
+                <td>7.8</td>
+                <td>333932083</td>
+                <td>150000000</td>
+                </tr>
+                <tr>
+                <th>99</th>
+                <td>X-Men: First Class</td>
+                <td>2011</td>
+                <td>PG-13</td>
+                <td>131</td>
+                <td>Action, Adventure, Sci-Fi</td>
+                <td>Matthew Vaughn</td>
+                <td>Ashley Miller (screenplay by), Zack Stentz (sc...</td>
+                <td>English, German, French, Spanish, Russian</td>
+                <td>USA, UK</td>
+                <td>20 wins &amp; 38 nominations.</td>
+                <td>7.7</td>
+                <td>353624124</td>
+                <td>160000000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Kit Rana 2019</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+</body>
+</html>

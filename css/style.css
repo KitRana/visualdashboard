@@ -1,0 +1,51 @@
+.jumbotron {
+background-image: url(https://i.pinimg.com/originals/f1/1c/78/f11c78eb7a85cf6e3afae88f266b7775.jpg);
+background-size: cover;
+height: 100%;
+}
+
+.img-thumbnail {
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.custom-card {
+    width: auto;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .lang {
+    width: auto;
+    height: 340px;
+}
+    .language {
+    width: auto;
+    height: 155px;
+}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .lang {
+    width: auto;
+    height: 450px;
+}
+    .language {
+    width: auto;
+    height: 212px;
+}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .lang {
+    width: auto;
+    height: 545px;
+}
+    .language {
+    width: auto;
+    height: 255px;
+}
+}
